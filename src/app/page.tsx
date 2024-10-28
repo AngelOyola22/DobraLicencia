@@ -123,7 +123,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Procesador de Código de Activación</h1>
+      <h1 className={styles.title}>Código de Activación DOBRA</h1>
       <div className={styles.card}>
         <div className={styles.inputGroup}>
           <label htmlFor="input-code" className={styles.label}>Ingrese el código:</label>
@@ -137,13 +137,13 @@ export default function Home() {
             aria-describedby="input-description"
           />
           <span id="input-description" className="sr-only">
-            Ingrese el código de activación que desea procesar
+            Ingrese el código de activación
           </span>
         </div>
         <button 
           onClick={() => processActivationCode(inputCode)}
           className={styles.button}
-          aria-label="Procesar código de activación"
+          aria-label="Generar código de activación"
         >
           Procesar Código
         </button>
@@ -152,10 +152,10 @@ export default function Home() {
             <h2 className={styles.subtitle}>Código de salida:</h2>
             <p ref={outputRef} className={styles.output} aria-live="polite">{outputCode}</p>
             <div className={styles.buttonGroup}>
-              <button onClick={copyToClipboard} className={styles.button} aria-label="Copiar código al portapapeles">
+              <button onClick={copyToClipboard} className={styles.button} aria-label="Copiar Código">
                 Copiar al portapapeles
               </button>
-              <button onClick={sendWhatsApp} className={styles.button} aria-label="Enviar código por WhatsApp">
+              <button onClick={sendWhatsApp} className={styles.button} aria-label="Enviar por WhatsApp">
                 Enviar por WhatsApp
               </button>
             </div>
